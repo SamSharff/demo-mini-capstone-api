@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user
 
   def create
     product = Product.find_by(id: params[:product_id])
@@ -26,11 +27,7 @@ class OrdersController < ApplicationController
   end
 
   def index
-    if current_user
-      @orders = current_user.orders
-      render template: "orders/index"
-    else
-     render json: [], status: :unauthorized
-   end
+    @orders = current_user.orders
+    render template: "orders/index"
   end
 end
