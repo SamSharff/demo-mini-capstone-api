@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   post "/users" => "users#create" #SIGNUP
 
   post "/sessions" => "sessions#create" #LOGIN
+
+  post "/orders" => "orders#create" 
+  get "/orders/:id" => "orders#show"
+  get "/orders" => "orders#index" 
 end

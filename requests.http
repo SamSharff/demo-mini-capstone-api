@@ -46,3 +46,23 @@ Content-Type: application/json
   "email": "amanda@test.com",
   "password": "password"
 }
+
+### Order create (login)
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 1,
+  "quantity": 2, 
+  "subtotal": 52, 
+  "tax": 5.20, 
+  "total": 57.2
+}
+
+### ORDERS SHOW
+GET http://localhost:3000/orders/1.json
+
+
+### ORDERS INDEX
+GET http://localhost:3000/orders.json
