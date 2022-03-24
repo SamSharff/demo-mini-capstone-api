@@ -8,6 +8,7 @@
   tax: @product.tax,
   total: @product.total,
   is_discounted?: @product.is_discounted?,
+  category: @product.categories,
   created_at: @product.created_at,
   updated_at: @product.updated_at
 }

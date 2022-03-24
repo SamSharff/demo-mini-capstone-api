@@ -8,7 +8,7 @@
     supplier: product.supplier,
     tax: product.tax,
     total: product.total,
-    is_discounted?: product.is_discounted?
+    is_discounted?: product.is_discounted?,
     categories: product.categories
   }
 end
