@@ -34,11 +34,15 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "luna",
-  "email": "luna@test.com",
+  "name": "evelyn",
+  "email": "evelyn@example.com",
   "password": "password",
-  "password_confirmation": "password"
+  "password_confirmation": "password",
+  "admin": true
 }
+
+### USERS DESTROY
+DELETE http://localhost:3000/users/3.json
 
 ### Sessions create (login)
 POST http://localhost:3000/sessions.json

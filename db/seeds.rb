@@ -1,4 +1,5 @@
-
+order = Order.new({user_id: 1, subtotal: 15, tax: 1, total: 16})
+order.save
 
 # user = User.new({name: "sam", email: "sam@example.new", password_digest: "password", admin: true})
 # user.save

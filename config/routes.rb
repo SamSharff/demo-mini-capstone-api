@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   delete "/products/:id" => "products#destroy"
 
   post "/users" => "users#create" #SIGNUP
+  delete "/users/:id" => "users#destroy" #SIGNUP
 
   post "/sessions" => "sessions#create" #LOGIN
 
