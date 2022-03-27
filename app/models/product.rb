@@ -11,6 +11,7 @@ class Product < ApplicationRecord
   # validates :description, length: { in: 10..500 }
 
   has_many :categories, through: :category_products
+  
   # def categories
   #   category_products.map do |category_product|
   #     category_product.category
