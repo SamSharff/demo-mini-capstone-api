@@ -71,3 +71,13 @@ Authorization: Bearer {{jwt}}
 ### ORDERS INDEX
 GET http://localhost:3000/orders.json
 Authorization: Bearer {{jwt}}
+
+### CARTED-PRODUCT CREATE
+POST http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "product_id": 7,
+  "quantity": 16
+}
