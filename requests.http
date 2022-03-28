@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgwNTgxNTl9.Hy0JSbC9zXjGWiFLRYMDNcST90Cs_BJK9ur_TAlZZMg
+# @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgwNTgxNTl9.Hy0JSbC9zXjGWiFLRYMDNcST90Cs_BJK9ur_TAlZZMg
 
 ### PRODUCTS INDEX
 GET http://localhost:3000/products.json
@@ -29,13 +29,13 @@ Content-Type: application/json
 ### PRODUCTS DESTROY
 DELETE http://localhost:3000/products/2.json
 
-### Users create (signup)
+### Users create (signup) 
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "evelyn",
-  "email": "evelyn@example.com",
+  "name": "lou",
+  "email": "lou@example.com",
   "password": "password",
   "password_confirmation": "password",
   "admin": true
@@ -49,14 +49,14 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "luna@test.com",
+  "email": "lou@example.com",
   "password": "password"
 }
 
 ### Order create (login)
 POST http://localhost:3000/orders.json
 Content-Type: application/json
-Authorization: Bearer {{jwt}}
+# Authorization: Bearer {{jwt}}
 
 {
   "product_id": 10,
@@ -65,8 +65,8 @@ Authorization: Bearer {{jwt}}
 
 ### ORDERS SHOW
 GET http://localhost:3000/orders/1.json
-Authorization: Bearer {{jwt}}
+# Authorization: Bearer {{jwt}}
 
 ### ORDERS INDEX
 GET http://localhost:3000/orders.json
-Authorization: Bearer {{jwt}}
+# Authorization: Bearer {{jwt}}

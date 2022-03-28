@@ -1,15 +1,3 @@
-order = Order.new({user_id: 1, subtotal: 15, tax: 1, total: 16})
-order.save
-
-# user = User.new({name: "sam", email: "sam@example.new", password_digest: "password", admin: true})
-# user.save
-
-# user = User.new({name: "aaron", email: "aaron@example.new", password_digest: "password", admin: true})
-# user.save
-
-# user = User.new({name: "evelyn", email: "eveyn@example.new", password_digest: "password"})
-# user.save
-
 # Supplier.create!(name: "Amazon", email: "amazon@email.com", phone_number: "243222342")
 # Supplier.create!(name: "Think Geek", email: "thinkgeek@email.com", phone_number: "5432534")
 
