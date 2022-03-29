@@ -1,4 +1,6 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwiZXhwIjoxNjQ4NjQzNTk4fQ.2oTZ47kFKq8DBCrSLsLJOXDlgaEugC8B6VC2XE8tOPU
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwiZXhwIjoxNjQ4NjQzNTk4fQ.2oTZ47kFKq8DBCrSLsLJOXDlgaEugC8B6VC2XE8tOPU #Lou
+
+@jwt_S = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJleHAiOjE2NDg2NDQ3NjF9.hwGN-DCt7_yjjsko2yeA-OvE90Bi22O55yF0fVK_wqU
 
 ### PRODUCTS INDEX
 GET http://localhost:3000/products.json
@@ -49,7 +51,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "lou@example.com",
+  "email": "sam@example.com",
   "password": "password"
 }
 
@@ -73,12 +75,12 @@ Authorization: Bearer {{jwt}}
 
 ### CARTED-PRODUCT CREATE
 POST http://localhost:3000/carted_products
-Authorization: Bearer {{jwt}}
+Authorization: Bearer {{jwt_S}}
 Content-Type: application/json
 
 {
-  "product_id": 6,
-  "quantity": 10
+  "product_id": 3,
+  "quantity": 2
 }
 
 ### CARTED-PRODUCT INDEX
