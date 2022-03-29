@@ -10,15 +10,11 @@ class CartedProductsController < ApplicationController
     )
     carted_product.save
     render json: carted_product
-    #   render json: { message: "Item, successfully added to cart." }, status: :created
-    # else
-    #   render json: { errors: user.errors.full_messages }, status: :bad_request
-    # end
   end
 
   def index
-  carted_products = current_user.carted_products.where(status: carted)
-  render json: carted_products.as_json
+    carted_products = current_user.carted_products.where(status: carted)
+    render json: carted_products.as_json
   end
 
 
