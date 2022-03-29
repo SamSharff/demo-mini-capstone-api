@@ -1,5 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwiZXhwIjoxNjQ4NTcxNzg0fQ.R1fiSaTwvuifgnK_VNl73Eqbw2QyXtBpJiE3YZdUerw",
-  "email": "lou@example.com
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwiZXhwIjoxNjQ4NjQzNTk4fQ.2oTZ47kFKq8DBCrSLsLJOXDlgaEugC8B6VC2XE8tOPU
 
 ### PRODUCTS INDEX
 GET http://localhost:3000/products.json
@@ -30,7 +29,7 @@ Content-Type: application/json
 ### PRODUCTS DESTROY
 DELETE http://localhost:3000/products/2.json
 
-### Users create (signup) 
+### USERS CREATE (signup) 
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
@@ -45,7 +44,7 @@ Content-Type: application/json
 ### USERS DESTROY
 DELETE http://localhost:3000/users/3.json
 
-### Sessions create (login)
+### SESSIONS CREATE (login)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
@@ -54,7 +53,7 @@ Content-Type: application/json
   "password": "password"
 }
 
-### Order create (login)
+### ORDERS CREATE (login)
 POST http://localhost:3000/orders.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
@@ -78,6 +77,10 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "product_id": 7,
-  "quantity": 16
+  "product_id": 6,
+  "quantity": 10
 }
+
+### CARTED-PRODUCT INDEX
+GET http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}

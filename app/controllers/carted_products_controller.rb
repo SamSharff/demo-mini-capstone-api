@@ -16,4 +16,10 @@ class CartedProductsController < ApplicationController
     # end
   end
 
+  def index
+  carted_products = CartedProduct.all 
+  render json: carted_products.as_json
+  end
+
+
 end
