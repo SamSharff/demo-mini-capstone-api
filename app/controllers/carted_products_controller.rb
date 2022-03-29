@@ -22,4 +22,5 @@ class CartedProductsController < ApplicationController
     carted_product.status = "removed"
     carted_product.save
     render json: {status: "Product successfully removed."}
+  end
 end
