@@ -1,0 +1,11 @@
+@carted_products.map do |carted_product|
+  {
+    id: carted_product.id,
+    product_id: carted_product.product_id,
+    quantity: carted_product.quantity,
+    status: carted_product.status,
+    order_id: carted_product.order_id,
+    created_at: carted_product.created_at,
+    updated_at: carted_product.updated_at
+  }
+end

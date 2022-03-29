@@ -84,7 +84,7 @@ Content-Type: application/json
 }
 
 ### CARTED-PRODUCT INDEX
-GET http://localhost:3000/carted_products
+GET http://localhost:3000/carted_products.json
 Authorization: Bearer {{jwt}}
 
 ### CARTED-PRODUCT DESTROY
