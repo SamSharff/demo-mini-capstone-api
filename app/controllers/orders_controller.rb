@@ -3,14 +3,14 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new( 
-    user_id: current_user.id
-    # subtotal: calculated_subtotal, 
-    # tax: calculated_tax, 
-    # total: calculated_total
-  )
+      user_id: current_user.id,  
+      # subtotal: calculated_subtotal, 
+      # tax: calculated_tax, 
+      # total: calculated_total
+    )
     @order.save
     carted_products = current_user.carted_products.where(status: "carted")
-    carted_products.updated_all(status: "purchased", order_id: @order.id)
+    carted_products.update_all(status: "purchased", order_id: @order.id)
     @order.update_totals
     render template: "orders/show"
   end

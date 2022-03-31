@@ -3,7 +3,7 @@ class Order < ApplicationRecord
   has_many :carted_products
   has_many :products, through: :carted_products
 
-  def updated_totals
+  def update_totals
     calculated_subtotal = 0
     carted_products.each do |carted_product|
       calculated_subtotal += carted_product.quantity * carted_product.product.price

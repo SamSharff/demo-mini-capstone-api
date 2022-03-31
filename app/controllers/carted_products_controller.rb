@@ -5,8 +5,7 @@ class CartedProductsController < ApplicationController
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
-      status: "carted",
-      order_id: params[:order_id]
+      status: "carted"
     )
     @carted_product.save
     render template: "carted_products/show"
@@ -18,9 +17,9 @@ class CartedProductsController < ApplicationController
   end
 
   def destroy
-    carted_product = current_user.carted_products.find(params[:id], status: "carted")
+    carted_product = current_user.carted_products.find_by(id: params[:id], status: "carted")
     carted_product.status = "removed"
     carted_product.save
-    render json: {status: "Product successfully removed."}
+    render json: {status: "Carted product successfully removed!"}
   end
 end
